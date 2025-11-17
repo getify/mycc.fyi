@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<title>My CC FYI</title>
+ <style>
+  body { font-family: sans-serif; max-width: 480px; margin: 40px auto; }
+  label { display: block; margin-bottom: 12px; }
+  input { width: 100%; padding: 6px; font-size: 14px; }
+</style>
+</head>
+<body>
+<h1>Credit Card Autofill Viewer</h1>
+<details>
+  <summary>What is this?</summary>
+  <p>This is a simple static HTML/CSS only site (no JS, no server, etc) built for one purpose: to let you trick your browser (Chrome, etc) into autofilling your own saved CC details into a <form> that looks like an ecommerce check-out form, so you can see the stored number, expiration, and (if applicable) CVV code.</p>
+  <p>That's your data, and you chose to securely store it in your browser/payment manager. This tool just makes it easier for you to see your own data.</p>
+  <p>There is ABSOLUTELY NO TRACKING OR SPYING CODE whatsoever on this page. You could just run it locally in your own browser, but I think browsers are more reluctant to autofill sensitive info when you do so. That's the only reason this is a real site.</p>
+  <p>But it's <a href="https://github.com/getify/mycc.fyi">hosted here on Github-Pages</a> so that you know it's not on some suspicious private server with potentially nefarious tracking going on, and so that you can see all the "code" (again, HTML/CSS only) that's on it.</p>
+</details>
+<iframe name="form-submission-sink" style="display:none" aria-hidden="hidden">This just captures any mistaken submissions of the form, which should be ignored/thrown away anyway!</iframe>
+<form name="show-my-own-cc-info" action="/DOES-NOT-EXIST-DONT-SUBMIT" method="post" target="form-submission-sink">
+<label>
+  Card number
+  <input
+    type="text"
+    autocomplete="cc-number"
+    inputmode="numeric"
+  >
+</label>
+
+<label>
+  Expiry month
+  <input
+    type="text"
+    autocomplete="cc-exp-month"
+    inputmode="numeric"
+  >
+</label>
+
+<label>
+  Expiry year
+  <input
+    type="text"
+    autocomplete="cc-exp-year"
+    inputmode="numeric"
+  >
+</label>
+
+<label>
+  Security code (CVV/CVC)
+  <input
+    type="text"
+    autocomplete="cc-csc"
+    inputmode="numeric"
+  >
+</label>
+<input type="submit" disabled value="DON'T SUBMIT THIS FORM">
+</form>
+</body>
+</html>
