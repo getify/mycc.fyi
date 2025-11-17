@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
 <meta charset="utf-8">
-<title>My CC FYI</title>
+<title>My Own Saved Credit Card Info: Autofill Viewer</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <style>
   body { font-family: sans-serif; max-width: 480px; margin: 40px auto; }
@@ -11,13 +11,14 @@
 </style>
 </head>
 <body>
-<h1>Credit Card Autofill Viewer</h1>
+<h1>My Own Saved Credit Card Info: Autofill Viewer</h1>
 <details>
   <summary>What is this?</summary>
   <p>This is a simple static HTML/CSS only site (no JS, no server, etc) built for one purpose: to let you <em>trick</em> your browser (Chrome, etc) into autofilling your own saved CC details into a &lt;form&gt; that looks like an ecommerce check-out form, so you can see the stored number, expiration, and (if applicable) CVV code.</p>
   <p>That's your data, and you chose to securely store it in your browser/payment manager. This tool just makes it easier for you to see your own data.</p>
   <p>There is ABSOLUTELY NO TRACKING OR SPYING CODE whatsoever on this page. You could just run it locally in your own browser, but I think browsers are more reluctant to autofill sensitive info when you do so. That's the only reason this is a real site.</p>
   <p>But it's <a href="https://github.com/getify/mycc.fyi">hosted here on Github-Pages</a> so that you know it's not on some suspicious private server with potentially nefarious tracking going on, and so that you can see all the "code" (again, HTML/CSS only) that's on it.</p>
+  <p>Just click into one of the fields below to trigger an autofill/prompt. That's it.</p>
 </details>
 <hr>
 <iframe name="form-submission-sink" style="display:none" aria-hidden="hidden">This just captures any mistaken submissions of the form, which should be ignored/thrown away anyway!</iframe>
