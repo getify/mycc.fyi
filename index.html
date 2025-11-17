@@ -2,12 +2,14 @@
 <html lang="en-US">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; form-action 'none'; frame-src 'none'; style-src-elem 'sha256-zZ3gXtf2PNxVlX+PVmxxrEo3+IHPK8b4MQzkQWS7Zj8='">
 <title>My Own Saved Credit Card Info: Autofill Viewer</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <style>
   body { font-family: sans-serif; max-width: 480px; margin: 40px auto; }
   label { display: block; margin-bottom: 12px; }
   input { width: 100%; padding: 6px; font-size: 14px; }
+  iframe { display: none; }
 </style>
 </head>
 <body>
@@ -20,8 +22,10 @@
   <p>But it's <a href="https://github.com/getify/mycc.fyi">hosted here on Github-Pages</a> so that you know it's not on some suspicious private server with potentially nefarious tracking going on, and so that you can see all the "code" (again, HTML/CSS only) that's on it.</p>
   <p>Just click into one of the fields below to trigger an autofill/prompt. That's it.</p>
 </details>
+<br>
 <hr>
-<iframe name="form-submission-sink" style="display:none" aria-hidden="hidden">This just captures any mistaken submissions of the form, which should be ignored/thrown away anyway!</iframe>
+<br>
+<iframe name="form-submission-sink" aria-hidden="hidden">This just captures any mistaken submissions of the form, which should be ignored/thrown away anyway!</iframe>
 <form name="show-my-own-cc-info" action="/DOES-NOT-EXIST-DONT-SUBMIT" method="post" target="form-submission-sink">
 <label>
   Card number
