@@ -18,6 +18,7 @@
   <p>There is ABSOLUTELY NO TRACKING OR SPYING CODE whatsoever on this page. You could just run it locally in your own browser, but I think browsers are more reluctant to autofill sensitive info when you do so. That's the only reason this is a real site.</p>
   <p>But it's <a href="https://github.com/getify/mycc.fyi">hosted here on Github-Pages</a> so that you know it's not on some suspicious private server with potentially nefarious tracking going on, and so that you can see all the "code" (again, HTML/CSS only) that's on it.</p>
 </details>
+<hr>
 <iframe name="form-submission-sink" style="display:none" aria-hidden="hidden">This just captures any mistaken submissions of the form, which should be ignored/thrown away anyway!</iframe>
 <form name="show-my-own-cc-info" action="/DOES-NOT-EXIST-DONT-SUBMIT" method="post" target="form-submission-sink">
 <label>
@@ -55,7 +56,8 @@
     inputmode="numeric"
   >
 </label>
-<input type="submit" disabled value="DON'T SUBMIT THIS FORM">
+<p><input type="reset" value="RESET THIS FORM"></p>
+<p></p><input type="submit" disabled value="DON'T SUBMIT THIS FORM"></p>
 </form>
 </body>
 </html>
